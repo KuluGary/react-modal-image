@@ -16,7 +16,7 @@ export default class Image extends Component {
   };
 
   render() {
-    const { id, className, src, style, handleDoubleClick } = this.props;
+    const { id, className, src, style, handleDoubleClick, onError } = this.props;
 
     return (
       <div>
@@ -29,6 +29,7 @@ export default class Image extends Component {
           onLoad={this.handleOnLoad}
           onDoubleClick={handleDoubleClick}
           onContextMenu={this.handleOnContextMenu}
+          onError={onError}
         />
       </div>
     );

@@ -183,6 +183,7 @@ export default class Lightbox extends Component {
                   }px, ${move.y}px, 0) rotate(${rotationDeg}deg)`
                 }}
                 handleDoubleClick={this.toggleZoom}
+                onError={this.props.onError}
               />
             )}
             {!zoomed && (
@@ -197,6 +198,7 @@ export default class Lightbox extends Component {
                   WebkitTransform: `translate3d(-50%, -50%, 0) rotate(${rotationDeg}deg)`,
                   MsTransform: `translate3d(-50%, -50%, 0) rotate(${rotationDeg}deg)`
                 }}
+                onError={this.props.onError}
               />
             )}
           </div>
